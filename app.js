@@ -1,10 +1,10 @@
-// // let list = document.querySelector("ul")
-// // console.log(list);
-// // console.log(list.parentElement)
-// // console.log(list.previousElementSibling);
-// // console.log(list.children);
-// // console.log(list.firstElementChil
-// // list.classList.add(".item")\
+// let list = document.querySelector("ul")
+// console.log(list);
+// console.log(list.parentElement)
+// console.log(list.previousElementSibling);
+// console.log(list.children);
+// console.log(list.firstElementChil
+// list.classList.add(".item")
 
 
 
@@ -67,7 +67,7 @@
 
 
 
-=============================
+
 
 
 
@@ -97,19 +97,64 @@
 
 
 
-const form = document.getElementById('commentForm');
+// const form = document.getElementById('commentForm');
 
 
-form.addEventListener('submit', (event) => {
+// form.addEventListener('submit', (event) => {
 
-  event.preventDefault();
+//   event.preventDefault();
 
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const comment = document.getElementById('comment').value;
+//   const name = document.getElementById('name').value;
+//   const email = document.getElementById('email').value;
+//   const comment = document.getElementById('comment').value;
 
  
-  console.log('Name:', name);
-  console.log('Email:', email);
-  console.log('Comment:', comment);
-});
+//   console.log('Name:', name);
+//   console.log('Email:', email);
+//   console.log('Comment:', comment);
+// });
+
+
+
+
+
+
+
+// const data ='{"id":356, "type":"general", "joke": "Why does a chicken coop only have two doors ?" }';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const board = document.getElementById('board');
+
+  for (let row = 0; row < 8; row++) {
+    for (let col = 0; col < 8; col++) {
+      const cell = document.createElement('div');
+      cell.classList.add('cell');
+      
+    
+      if ((row + col) % 2 === 0) {
+        cell.classList.add('white');
+      } else {
+        cell.classList.add('black');
+      }
+
+      board.appendChild(cell);
+    }
+  }
+

@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
+  
  <!-- <h1>GeForce 20 </h1>
  <ul>
     <li>GTX 1650</li>
@@ -59,17 +61,17 @@
 
     <script src="script.js"></script> -->
 
-
-<!-- <ul class="shopping-list">
+<!-- 
+ <ul class="shopping-list">
 <li><button>Milk</button></li>     
 <li><button>Butter</button></li>     
 <li><button>Bread</button></li>     
 <li><button>Cheese</button></li>     
-</ul> -->
+</ul>   -->
 
 
 
-
+<!-- 
 <form id="commentForm">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name"><br><br>
@@ -81,9 +83,175 @@
     <textarea id="comment" name="comment"></textarea><br><br>
   
     <button type="submit">Koments</button>
-  </form>
+  </form> -->
   
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Шахматная доска</title>
+<style>
+  .board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    width: 400px;
+    height: 400px;
+  }
+  .cell {
+    width: 50px;
+    height: 50px;
+  }
+  .white {
+    background-color: grey;
+  }
+  .black {
+    background-color: #000000;
+  }
+</style>
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Эффект подъема при наведении</title>
+<style>
+  .image-container {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .image-container img {
+    display: block;
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  
+  .image-container:hover img {
+    transform: translateY(-10px);
+  }
+</style>
+
+
+<div class="image-container">
+ 
+</div>
+
+
+<div class="board" id="board"></div>
+
     <script src="./app.js"></script>
+    <!-- <img class="d" src="https://blog.tempoinstitute.com/wp-content/uploads/2019/07/aperture-black-blur-274973-800x600.jpg" alt=""> -->
+   <!-- <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/camping-on-top-of-the-mountain-during-sunset-free-photo.jpg?w=600&quality=80" alt=""> -->
+    <!-- <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75" alt=""> -->
+
+
+
+
+
+
+    <!-- <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Time</title>
+    </head>
+    <body>
+        <h1>Taymer</h1>
+        <div id="counter">0</div>
+        
+        <script>
+            
+            let count = 0;
+    
+           
+            setInterval(() => {
+                count++;
+                document.getElementById("counter").textContent = count;
+            }, 1000);
+        </script> -->
+    
+
+
+
+
+
+
+
+
+
+
+
+        <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+</head>
+<body>
+
+<div>
+    <h2>Saniye: <span id="timer">0</span></h2>
+    <button id="startPauseBtn">Start</button>
+</div>
+
+<script>
+    let timerElement = document.getElementById("timer");
+    let startPauseButton = document.getElementById("startPauseBtn");
+
+    let timer = 0;               
+    let intervalId = null;       \
+    let isRunning = false;       
+    
+    function updateTimer() {
+        timer++;
+        timerElement.textContent = timer;
+    }
+
+   
+    function toggleTimer() {
+        if (isRunning) {
+            clearInterval(intervalId);   
+            startPauseButton.textContent = "Basla";
+        } else {
+            intervalId = setInterval(updateTimer, 1000); 
+            startPauseButton.textContent = "Pauza";
+        }
+        isRunning = !isRunning;   
+    }
+
+    
+    startPauseButton.addEventListener("click", toggleTimer);
+</script>
+
 </body>
+</html>
+
+  </body>
 </html>
